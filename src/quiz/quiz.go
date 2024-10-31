@@ -26,10 +26,10 @@ func ProblemPuller(filename string) ([]Problem, error) {
 		return nil, fmt.Errorf("error reading data from %s file; %s", filename, err.Error())
 	}
 
-	return ParseProblem(lines), nil
+	return parseProblem(lines), nil
 }
 
-func ParseProblem(lines [][]string) []Problem {
+func parseProblem(lines [][]string) []Problem {
 	problems := make([]Problem, len(lines))
 
 	for i := range lines {
