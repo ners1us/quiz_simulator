@@ -13,6 +13,4 @@ FROM alpine:latest
 
 WORKDIR /app
 
-EXPOSE 8080
-
 COPY --from=builder /app/quiz_simulator .
